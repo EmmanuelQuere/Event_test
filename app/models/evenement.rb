@@ -2,9 +2,7 @@ class Evenement < ApplicationRecord
   validates :start_date, presence: true
   validates :duration,
     presence: true,
-    numericality: { greater_than_or_equal_to: 0, },
-    validate: multiple_five(duration)
-
+    numericality: { greater_than_or_equal_to: 0 }
 
   validates :title,
     presence: true,
@@ -14,8 +12,7 @@ class Evenement < ApplicationRecord
     presence: true,
     length: { in: 20..1000}
 
-  validates :price,
-    presence: true
+  validates :price, presence: true
 
 
   validates :location, presence: true
