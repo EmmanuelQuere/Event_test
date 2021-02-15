@@ -15,7 +15,7 @@ class Evenement < ApplicationRecord
     length: { in: 20..1000}
 
   validates :price,
-    presence: true,
+    presence: true
 
 
   validates :location, presence: true
