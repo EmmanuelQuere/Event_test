@@ -1,0 +1,7 @@
+<h1>Bienvenue sur le profil de : <%= User.find(params['id']).first_name %> <%= User.find(params['id']).last_name %></h1>
+<h2>Information :</h2>
+<p>Nom complet : <%= User.find(params['id']).first_name %> <%= User.find(params['id']).last_name %></p>
+<p>Email : <%= User.find(params['id']).email %></p>
+<p>Description : <%= User.find(params['id']).description %></p>
+<br><br/>
+

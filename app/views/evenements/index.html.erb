@@ -1,2 +1,28 @@
-<h1>Evenements#index</h1>
-<p>Find me in app/views/evenements/index.html.erb</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-2">Bienvenue sur CovEvent</h1>
+    <p class="lead">L'organisation des évènements les plus confinés et pour des groupes de moins de 6 personnes</p>
+    <hr>
+    <blockquote class="blockquote">
+      <p>Qui a dis qu'il fallait être plus de 6 pour s'amuser ?</p>
+    </blockquote>
+    
+  </div>
+</div>
+
+<% Evenement.all.each_with_index do |evenement, index| %>
+        <div class="container-fluid">
+          <div class="card bg-light mb-3 align-sef-center" style="max-width: 18rem;">
+            <div class="card-header">Evenement n° <%= (index+1) %></div>
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted"><%= evenement.start_date %></h6>
+              <p class="card-text"><%= evenement.title %></p>
+            </div>
+            <div class="card-footer bg-transparent">
+              <a href="/evenements/<%= evenement.id %>/" class="card-link">Lien vers l'Event</a>
+            </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+      <% end %>
